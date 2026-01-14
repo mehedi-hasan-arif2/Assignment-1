@@ -587,36 +587,253 @@ img {
 
 /* Mobile Layout (Max 576px) */
 @media screen and (max-width: 576px) {
-    .nav-links { display: none; } 
-    .navbar { padding: 15px 20px; }
-    
-    /* Use min-height for better content handling */
-    .banner { 
-        min-height: auto; 
-        padding: 80px 15px; 
+    /* Navbar Section */
+    .navbar { 
+        padding: 10px 5px; 
+        justify-content: space-between;
     }
-    
-    .banner h1 { font-size: 28px; } /* Fits 320px screens perfectly */
-    .banner-desc { font-size: 15px; }
-    .banner-buttons { flex-direction: column; gap: 15px; } 
-    
+
+    .logo img {
+        height: 20px; 
+    }
+
+    .nav-links { 
+        display: flex; 
+        gap: 5px; /
+    }
+
+    .nav-links a {
+        font-size: 8px; 
+        
+    }
+
+    .btn-primary {
+        padding: 4px 8px; 
+        font-size: 8px;
+        border-radius: 4px;
+        
+    }
+
+    /* Banner Section */
+    .banner {
+        padding: 40px 15px;
+        background-position: center; 
+    }
+
+    .early-access {
+        padding: 6px 16px;
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .banner h1 { 
+        font-size: 23px; 
+        line-height: 1.3;
+    }
+
+    .banner-desc { 
+        font-size: 13px; 
+        margin-bottom: 20px;
+    }
+
+    .banner-buttons { 
+        padding: 13px;
+        font-size: 10px;
+        width: 100%;
+    }
+
     .btn-start, .btn-video { 
-        justify-content: center; 
+        padding: 13px;
+        font-size: 10px;
         width: 100%; 
     }
+
     
-    .notes-grid { grid-template-columns: 1fr; } 
-    .solution-content h2 { font-size: 26px; }
-    .cta-box h2 { font-size: 28px; }
-    
-    .footer-top {
+   /* Notes Section */
+    .section-header h2 {
+        font-size: 20px; 
+        line-height: 1.2;
+        margin-bottom: 10px;
+        padding: 0 10px;
+    }
+
+    .section-header p {
+        font-size: 10px; 
+        line-height: 1.5;
+        padding: 0 20px;
+        margin-bottom: 10px;
+    }
+
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .note-card {
+        padding: 20px 10px;
+        min-height: 160px; 
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
         text-align: center;
     }
+
+    .note-card img, .note-card i {
+        width: 35px; 
+        margin-bottom: 10px;
+    }
+
+    .note-card h3 {
+        font-size: 14px; 
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .note-card p {
+        font-size: 11px; 
+        line-height: 1.4;
+    }
+
+
+/* Start of Solution Section */
+.solution-section {
+    padding: 5px 0 20px 0; 
 }
+
+.solution-content {
+    text-align: center;
+    padding: 0 15px;
+}
+
+.solution-tag {
+    font-size: 11px;
+    margin-bottom: 8px;
+}
+
+.solution-content h2 {
+    font-size: 20px; 
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.solution-desc {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+    text-align: left; 
+    display: inline-block; 
+}
+
+.feature-list li {
+    font-size: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.list-icon {
+    width: 14px;
+    height: 14px;
+}
+
+
+/* Start of Early Access Section */
+.early-access-section {
+    padding: 30px 15px; 
+}
+
+.cta-box {
+    padding: 30px 20px;
+}
+
+.cta-box h2 {
+    font-size: 20px; 
+    line-height: 1.2;
+}
+
+.cta-box .subtitle {
+    font-size: 11px;
+    margin: 10px 0;
+}
+
+.cta-box .promo-text {
+    font-size: 10px; 
+    margin-bottom: 15px;
+}
+
+/* Early Access Button  */
+.btn-early {
+    width: fit-content; 
+    margin: 0 auto; 
+    padding: 10px 20px; 
+    font-size: 13px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-early img {
+    width: 14px; 
+}
+
+.footer-notes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; 
+    margin-top: 15px;
+}
+
+.footer-notes span, .footer-notes .dot {
+    font-size: 8px; 
+    display: inline-block; 
+}
+
+ /* Footer Section */
+    .footer-section {
+        padding: 20px 0;
+        min-height: auto; 
+    }
+
+    .footer-top {
+        display: flex;
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .footer-logo img {
+        width: 50px; 
+        height: auto;
+    }
+
     .social-icons {
-        justify-content: center; 
-        gap: 25px; 
-        margin-top: 20px;
+        display: flex;
+        gap: 12px;
+        margin-top: 0;
+    }
+
+    .social-icons a i { 
+        font-size: 12px;
+     }
+
+    .footer-bottom {
+        
+        padding-bottom: 10px;
+    }
+
+    .footer-bottom p {
+        font-size: 7px;
+        text-align: center;
+    }
+
     }
