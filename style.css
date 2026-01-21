@@ -573,40 +573,28 @@ img {
 
 /* RESPONSIVE DESIGN */
 
-/* Tablet Layout (Max 992px) */
-@media screen and (max-width: 992px) {
-    .navbar { padding: 15px 5%; }
-    .notes-grid { grid-template-columns: repeat(2, 1fr); } 
-    .banner h1 { font-size: 40px; }
-    .solution-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 30px;
-    }
-}
-
 /* Mobile Layout (Max 576px) */
 @media screen and (max-width: 576px) {
     /* Navbar Section */
     .navbar { 
-        padding: 10px 5px; 
+        padding: 12px 10px; 
         justify-content: space-between;
     }
 
     .logo img {
-        height: 20px; 
+          width: 60px; 
+        height: auto; 
     }
 
     .nav-links { 
         display: flex; 
-        gap: 5px; /
+        gap: 13px; 
     }
 
     .nav-links a {
-        font-size: 8px; 
+        font-size: 9px; 
         
     }
-
     .btn-primary {
         padding: 4px 8px; 
         font-size: 8px;
@@ -616,8 +604,29 @@ img {
 
     /* Banner Section */
     .banner {
-        padding: 40px 15px;
-        background-position: center; 
+       padding: 60px 15px; 
+       min-height: 400px; 
+       background-size: 100% 100%;
+    }
+
+    /* All Overlay Control */
+    .banner.overlay {
+        opacity: 0;
+        pointer-events: auto;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Touch Effect */
+    .banner.overlay:active {
+        opacity: 1;
+    }
+
+    .banner .overlay.left {
+        width: 3%; 
+    }
+
+    .banner .overlay.right {
+       width: 3%;
     }
 
     .early-access {
@@ -647,7 +656,6 @@ img {
         font-size: 10px;
         width: 100%; 
     }
-
     
    /* Notes Section */
     .section-header h2 {
@@ -695,54 +703,57 @@ img {
         line-height: 1.4;
     }
 
-
 /* Start of Solution Section */
-.solution-section {
-    padding: 5px 0 20px 0; 
-}
+   .solution-section {
+       padding: 10px 0;
+       background-color: #ffffff; 
+       overflow: hidden;  
+    }
+    .solution-container {
+        flex-direction: column; 
+        gap: 15px; 
+        text-align: center;
+    }
 
-.solution-content {
-    text-align: center;
-    padding: 0 15px;
-}
+    .solution-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-.solution-tag {
-    font-size: 11px;
-    margin-bottom: 8px;
-}
+    .solution-image img {
+        max-width: 250px; 
+        width: 100%;
+    }
 
-.solution-content h2 {
-    font-size: 20px; 
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
+    .solution-content {
+        margin-top: 0;
+        padding: 0 10px;
+    }
 
-.solution-desc {
-    font-size: 10px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
+    .solution-content h2 {
+        font-size: 24px; 
+        line-height: 1.3;
+    }
 
-.feature-list {
-    list-style: none;
-    padding: 0;
-    text-align: left; 
-    display: inline-block; 
-}
+    .solution-desc {
+        font-size: 13px; 
+    }
 
-.feature-list li {
-    font-size: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+    .feature-list {
+        display: inline-block; 
+        text-align: left; 
+    }
 
-.list-icon {
-    width: 14px;
-    height: 14px;
-}
+    .feature-list li {
+        font-size: 13px;
+        gap: 10px;
+    }
 
+    .list-icon {
+        width: 16px;
+        height: 16px;
+    }
 
 /* Start of Early Access Section */
 .early-access-section {
@@ -812,7 +823,7 @@ img {
     }
 
     .footer-logo img {
-        width: 50px; 
+        width: 65px; 
         height: auto;
     }
 
@@ -823,11 +834,10 @@ img {
     }
 
     .social-icons a i { 
-        font-size: 12px;
+        font-size: 13px;
      }
 
     .footer-bottom {
-        
         padding-bottom: 10px;
     }
 
